@@ -4,6 +4,7 @@ Define a square
 Has a private instance attribute: size
 """
 
+
 class Square:
     """
     Class with an instance attribut size
