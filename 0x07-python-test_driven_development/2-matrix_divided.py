@@ -14,11 +14,13 @@ def matrix_divided(matrix, div):
     or matrix row not the same size
     ZeroDivisionError: if div is 0
     """
-    if not all(isinstance(row, list) and all(isinstance(value, int))
-            or all(isinstance(value, float) for value in row) 
-            for row in matrix):
-
-    if not isinstance(div, int) and not isinstance(div, float):
+    if not all(isinstance(row, list) and all(isinstance(value, (int, float)) 
+            for value in row) for row in matrix):
+        raise TypeError("matrix must be a matrix (list of lists)" 
+                " of integers/float")
+    if not all(len(row) == len(matrix[0]) for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
+    if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
