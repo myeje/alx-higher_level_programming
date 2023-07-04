@@ -1,1 +1,36 @@
+=============================================================
+Test cases: 0-add_integer
+function that adss two integers from argument
+=============================================================
 
+usage:
+======
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(3, 6)
+9
+
+>>> add_integer(50, -3)
+47
+
+>>> add_integer(4)
+102
+
+>>> add_integer(20.7, -5)
+15
+
+>>> add_integer(-30.5, -53.76)
+-83
+
+>>> add_integer(-4, -7)
+-11
+
+>>> add_integer(78, "name")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> add_integer("a", 24)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
