@@ -1,0 +1,23 @@
+=============================================================
+Test cases: 3-say_my_name
+function that prints a string with format
+=============================================================
+
+usage:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("Arya", "Stark")
+My name is Arya Stark
+
+>>> say_my_name("Arya")
+My name is Arya 
+
+>>> say_my_name("Arya", 12)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(12, "Stark")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
