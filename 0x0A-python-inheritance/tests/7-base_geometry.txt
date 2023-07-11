@@ -1,0 +1,27 @@
+=============================================================
+Test cases: 7-base_geometry
+function that raises exceptions
+=============================================================
+
+usage:
+======
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
+>>> bg.integer_validator("bank", 0)
+Traceback (most recent call last):
+...
+ValueError: bank must be greater then 0
+
+>>> bg.integer_validator("test", -20)
+Traceback (most recent call last):
+...
+ValueError: test must be greater then 0
+
+>>> bg.area()
+Exception: area() is not implemented
