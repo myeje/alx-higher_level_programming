@@ -67,8 +67,14 @@ class Rectangle(Base):
 
     def display(self):
         """Function that print the rectanglee instance with char '#'"""
-        for column in range(self.height):
-            print("#" * self.width)
+        for _ in range(self.y):
+            print()
+        for row in range(self.height):
+            for _ in range(self.x):
+                print(" ", end="")
+            for _ in range(self.width):
+                print("#", end="")
+            print()
 
     def __str__(self):
         """function that returns a string"""
