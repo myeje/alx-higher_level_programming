@@ -80,3 +80,9 @@ class Rectangle(Base):
         """function that returns a string"""
         output = "[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__, self.id, self.x, self.y, self.width, self.height)
         return (output)
+
+    def update(self, *args):
+        """Function that assigns an argument to each attribute"""
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        for i, arg in enumerate(args):
+            setattr(self, attributes[i], arg)
