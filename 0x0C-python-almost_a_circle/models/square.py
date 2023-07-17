@@ -8,11 +8,11 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """Class constructor"""
-        super().__init__(size, size, x, y, id)
         self.size = size
         self.x = x
         self.y = y
         self.id = None
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
@@ -42,3 +42,10 @@ class Square(Rectangle):
         elif len(kwargs) != 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        This function returns
+        the dictionary representation of a rectangle
+        """
+        return ({'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y})
