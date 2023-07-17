@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Unittest for rectangle"""
-
-
 import io
 from io import StringIO
 import sys
@@ -9,8 +7,9 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 
-class RectangleTestCase(unittest.TestCase):
 
+class RectangleTestCase(unittest.TestCase):
+    """Unit tests for rectangle class"""
     def setUp(self):
         self.rect = Rectangle(4, 6, 2, 3, 1)
 
@@ -63,6 +62,7 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(self.rect.height, 12)
         self.assertEqual(self.rect.x, 5)
         self.assertEqual(self.rect.y, 7)
+
 
 if __name__ == '__main__':
     unittest.main()
