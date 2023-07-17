@@ -19,7 +19,8 @@ class Base:
     def to_json_string(list_dictionaries):
         """"
         Method shows the JSON string representation
-        of a list of dictionaries"""
+        of a list of dictionaries
+        """
         if list_dictionaries is None or list_dictionaries == []:
             return ("[]")
         return (json.dumps(list_dictionaries))
@@ -38,3 +39,13 @@ class Base:
             else:
                 temp_list = [obj.to_dictionary() for obj in list_objs]
                 json_file.write(Base.to_json_string(temp_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """"
+        Static Method that returns the list of the JSON string
+        representation of a list of dictionaries
+        """
+        if json_string is None or json_string == []:
+            return ("[]")
+        return (json.loads(json_string))
