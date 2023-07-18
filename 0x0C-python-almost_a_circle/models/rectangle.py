@@ -83,7 +83,6 @@ class Rectangle(Base):
             f"- {self.width}/{self.height}"
         )
 
-
     def update(self, *args, **kwargs):
         """Function that assigns an argument to each attribute"""
         if len(args) != 0:
