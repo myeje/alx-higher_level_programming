@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Class Base"""
+
+
 import json
 import csv
 import os
@@ -163,5 +165,4 @@ class Base:
                 pen.forward(square.size)
                 pen.right(90)
 
-        # Close the window on click
         window.exitonclick()
