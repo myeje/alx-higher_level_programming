@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Class Base"""
 import json
+import csv
+import os
 
 
 class Base:
@@ -80,6 +82,47 @@ class Base:
                 json_list = json_file.read()
                 obj_list = cls.from_json_string(json_list)
                 temp_list = [cls.create(**obj) for obj in obj_list]
+        except FileNotFoundError:
+            pass
+        return (temp_list)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        Class method that serializes in CSV
+        """
+        filename = cls.__name__ + ".csv"
+
+        with open(filename, "w", newline="") as csv_file:
+            writer = csv.writer(csv_file)
+            if cls.__name__ == "Rectangle":
+                fieldnames = ['id', 'width', 'height', 'x', 'y']
+            elif cls.__name__ == "Square":
+                fieldnames = ['id', 'size', 'x', 'y']
+
+            writer.writerow(fieldnames)
+            if list_objs is not None:
+                for obj in list_objs:
+                    row = [getattr(obj, field) for field in fieldnames]
+                    writer.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        Class method that deserializes in CSV
+        """
+        filename = cls.__name__ + ".csv"
+        temp_list = []
+
+        try:
+            with open(filename, "r") as file:
+                reader = csv.reader(file)
+                header = next(reader)
+
+                for row in reader:
+                    dictionary = {k: int(v) for k, v in zip(header, row)}
+                    instance = cls.create(**dictionary)
+                    temp_list.append(instance)
         except FileNotFoundError:
             pass
         return (temp_list)
