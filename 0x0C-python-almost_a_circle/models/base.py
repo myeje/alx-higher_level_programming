@@ -3,6 +3,7 @@
 import json
 import csv
 import os
+import turtle
 
 
 class Base:
@@ -126,3 +127,41 @@ class Base:
         except FileNotFoundError:
             pass
         return (temp_list)
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Opens a window and draws all the Rectangles and Squares
+        """
+        window = turtle.Screen()
+        window.title("Shapes Drawing")
+        window.bgcolor("white")
+
+        pen = turtle.Turtle()
+        pen.speed(2)
+
+        pen.color("blue")
+        for rect in list_rectangles:
+            pen.penup()
+            pen.goto(rect.x, rect.y)
+            pen.pendown()
+            pen.forward(rect.width)
+            pen.right(90)
+            pen.forward(rect.height)
+            pen.right(90)
+            pen.forward(rect.width)
+            pen.right(90)
+            pen.forward(rect.height)
+            pen.right(90)
+
+        pen.color("red")
+        for square in list_squares:
+            pen.penup()
+            pen.goto(square.x, square.y)
+            pen.pendown()
+            for _ in range(4):
+                pen.forward(square.size)
+                pen.right(90)
+
+        # Close the window on click
+        window.exitonclick()
