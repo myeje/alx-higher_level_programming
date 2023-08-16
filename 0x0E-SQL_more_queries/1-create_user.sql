@@ -1,0 +1,1 @@
+-- A script that creates the MYSQL server user_0d_1
