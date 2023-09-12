@@ -10,6 +10,17 @@ class Rectangle {
 			this.height = h;
 		}
 	}
-}
+
+	Print() {
+		for (let i = 0; i < this.height; i++) {
+			let varName = '';
+			let j = 0;
+			for (; j < this.width; j++) {
+				varName += 'X';
+			}
+			console.log (varName);
+			}
+		}
+	}
 
 module.exports = Rectangle;
