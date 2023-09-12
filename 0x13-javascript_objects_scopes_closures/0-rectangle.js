@@ -1,8 +1,7 @@
 #!/usr/bin/node
-
 /**
- * Declaring and empty Rectangle
+ * Declaring an empty Rectangle
  */
-class Rectangle {}
+class Rectangle{}
 
 module.exports = Rectangle;
