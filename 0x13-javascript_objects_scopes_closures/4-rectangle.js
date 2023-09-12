@@ -28,17 +28,17 @@ class Rectangle {
 			}
 		}
 
-		rotate() {
-			let tmp = 0;
-			tmp = this.height;
-			this.height = this.width;
-			this.width = tmp;
-		}
-
-		double() {
-			this.width *= 2;
-			this.height *= 2;
-		}
+	rotate() {
+		let tmp = 0;
+		tmp = this.height;
+		this.height = this.width;
+		this.width = tmp;
 	}
+
+	double() {
+		this.width *= 2;
+		this.height *= 2;
+	}
+}
 
 module.exports = Rectangle;
