@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /**
- * Empty Rectangle
+ * Declaring and empty Rectangle
  */
 class Rectangle {}
 
