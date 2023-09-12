@@ -1,8 +1,7 @@
 #!/usr/bin/node
 /**
- * Empty Rectangle 
+ * Empty Rectangle
  */
-
 class Rectangle {}
 
-module.export = Rectangle;
+module.exports = Rectangle;
