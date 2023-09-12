@@ -2,7 +2,7 @@
 /**
  * Class Rectangle that defines a rectangle with 2 constructors
  * and an if statement
- * 
+ *
  * instance method print that prints out a char
  * instance method rotate() that exchanges the width and height
  * instance method double() that multiplies the width and height by 2
@@ -34,7 +34,7 @@ class Rectangle {
 			this.height = this.width;
 			this.width = tmp;
 		}
-	
+
 		double() {
 			this.width *= 2;
 			this.height *= 2;
