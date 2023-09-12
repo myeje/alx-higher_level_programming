@@ -11,7 +11,7 @@ class Rectangle {
 		}
 	}
 
-	Print() {
+	print() {
 		for (let i = 0; i < this.height; i++) {
 			let varName = '';
 			let j = 0;
