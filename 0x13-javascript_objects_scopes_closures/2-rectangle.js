@@ -2,9 +2,6 @@
 /**
  * Class Rectangle that defines a rectangle with 2 constructors
  * and an if statement
- * 
- * 
- * 
  */
 class Rectangle {
 	constructor (w, h) {
