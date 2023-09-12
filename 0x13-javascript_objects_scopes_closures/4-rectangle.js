@@ -7,7 +7,6 @@
  * instance method rotate() that exchanges the width and height
  * instance method double() that multiplies the width and height by 2
  */
-
 class Rectangle {
 	constructor (w, h) {
 		if (typeof w === 'number' && w > 0 && typeof h === 'number' && h > 0) {
@@ -17,7 +16,6 @@ class Rectangle {
 	}
 
 	print() {
-		console.log ("Normal:")
 		for (let i = 0; i < this.height; i++) {
 			let varName = '';
 			let j = 0;
