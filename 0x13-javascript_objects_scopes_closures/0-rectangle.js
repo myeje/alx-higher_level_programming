@@ -1,4 +1,5 @@
 #!/usr/bin/node
+
 /**
  * Declaring and empty Rectangle
  */
