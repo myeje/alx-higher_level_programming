@@ -9,4 +9,4 @@ exports.converter = function (base) {
 		return i.tostring(base);
 	}
 	return convert;
-}
+};
