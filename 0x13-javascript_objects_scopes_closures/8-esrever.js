@@ -11,5 +11,5 @@ exports.esrever = function (list) {
 		list2.push(list[num]);
 	}
 
-	return list;
+	return (list2);
 };
