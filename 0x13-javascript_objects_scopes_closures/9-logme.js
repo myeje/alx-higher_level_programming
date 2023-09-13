@@ -5,7 +5,7 @@
  */
 let num  = 0;
 
-exports.logMe = function count (item) {
-	console.log('${num}: $item}');
+exports.logMe = function (item) {
+	console.log(`${num}: ${item}`);
 	num++;
 };
