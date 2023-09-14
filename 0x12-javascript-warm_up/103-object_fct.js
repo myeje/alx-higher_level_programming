@@ -4,7 +4,7 @@ type: 'object',
 value: 12
 };
 console.log(myObject);
-myOnject.incur = function () {
+myObject.incur = function () {
 	this.value++;
 };
 myObject.incr();
