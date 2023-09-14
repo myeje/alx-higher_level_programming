@@ -6,6 +6,6 @@
 let num  = 0;
 
 exports.logMe = function (item) {
-	console.log(`${numArgsPrinted}: ${item}`);
+	console.log(`${num}: ${item}`);
 	num++;
 };
