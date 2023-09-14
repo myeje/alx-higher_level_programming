@@ -3,9 +3,9 @@
  * function that prints the number of arguments already printed
  * and the new argument value
  */
-let num  = 0;
+let num = 0;
 
 exports.logMe = function (item) {
-	console.log(`${numArgsPrinted}: ${item}`);
-	num++;
+  console.log(`${numArgsPrinted}: ${item}`);
+  num++;
 };
