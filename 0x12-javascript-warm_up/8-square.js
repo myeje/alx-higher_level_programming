@@ -3,10 +3,8 @@ const num = process.argv[2];
 
 if (parseInt(num)) {
 	for (let i = 0; i < num; i++) {
-		for (let j = 0; j < num; j++) {
-			console.log('X');
-		}
-	}
+		console.log('X'.repeat(num));
+	} 
 } else {
 	console.log('Missing size');
 }
