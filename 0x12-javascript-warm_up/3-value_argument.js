@@ -7,5 +7,3 @@ if (argument === undefined) {
 } else {
 	console.log(argument);
 }
-
-
