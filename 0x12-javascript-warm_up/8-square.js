@@ -2,9 +2,9 @@
 const num = process.argv[2];
 
 if (parseInt(num)) {
-	for (let i = 0; i < num; i++) {
-		console.log('X'.repeat(num));
-	} 
+  for (let i = 0; i < num; i++) {
+    console.log('X'.repeat(num));
+  }
 } else {
-	console.log('Missing size');
+  console.log('Missing size');
 }
