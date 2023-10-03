@@ -8,35 +8,35 @@
  * instance method double() that multiplies the width and height by 2
  */
 class Rectangle {
-	constructor (w, h) {
-		if (typeof w === 'number' && w > 0 && typeof h === 'number' && h > 0) {
-			this.width = w;
-			this.height = h;
-		}
-	}
+  constructor (w, h) {
+    if (typeof w === 'number' && w > 0 && typeof h === 'number' && h > 0) {
+      this.width = w;
+      this.height = h;
+    }
+  }
 
-	print() {
-		for (let i = 0; i < this.height; i++) {
-			let varName = '';
-			let j = 0;
-			for (; j < this.width; j++) {
-				varName += 'X';
-			}
-			console.log (varName);
-			}
-		}
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      let varName = '';
+      let j = 0;
+      for (; j < this.width; j++) {
+        varName += 'X';
+      }
+      console.log(varName);
+    }
+  }
 
-	rotate() {
-		let tmp = 0;
-		tmp = this.height;
-		this.height = this.width;
-		this.width = tmp;
-	}
+  rotate () {
+    let tmp = 0;
+    tmp = this.height;
+    this.height = this.width;
+    this.width = tmp;
+  }
 
-	double() {
-		this.width *= 2;
-		this.height *= 2;
-	}
+  double () {
+    this.width *= 2;
+    this.height *= 2;
+  }
 }
 
 module.exports = Rectangle;
